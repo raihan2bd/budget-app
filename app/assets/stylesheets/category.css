@@ -1,7 +1,5 @@
-.section-container {
-}
-
-.category-items {
+.category-items,
+.purchase-items {
   width: 100%;
   max-width: 800px;
   overflow-y: auto;
@@ -9,6 +7,10 @@
   flex-direction: column;
   background-color: transparent;
   height: calc(100vh - 218px);
+}
+
+.purchase-items {
+  height: calc(100vh - 294px);
 }
 
 .item-card {
@@ -25,26 +27,4 @@
 .item-icon {
   width: 50px;
   height: 50px;
-}
-
-.edit-btn {
-  color: var(--dark-blue);
-  border-color: var(--dark-blue);
-}
-
-.edit-btn:hover,
-.edit-btn:active {
-  background-color: var(--dark-blue);
-  color: #fff;
-}
-
-.del-btn {
-  border-color: crimson;
-  color: crimson;
-}
-
-.del-btn:hover,
-.del-btn:active {
-  background-color: crimson;
-  color: #fff;
 }

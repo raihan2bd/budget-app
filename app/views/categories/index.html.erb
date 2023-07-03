@@ -1,6 +1,6 @@
 <%= render 'shared/header', title: "Transactions", back_link: false %>
 
-<section class="section-container flex-column">
+<section class="flex-column">
 <div class="d-flex justify-content-between align-items-center p-3 bg-light">
     <% purchase_count = @unique_purchases.size %>
     <p class="m-0 fs-5">Spending: <span class="fw-bold"><%= number_to_currency(@total_amount) %></span></p>
