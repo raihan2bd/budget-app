@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root 'categories#index'
+  authenticated :user do 
+    root 'categories#index', as: :authenticated_root
+  end
+
+  unauthenticated do 
+    root 'categories#index', as: :unauthenticated_root
+  end
+  resources :categories, only: [:index, :new, :create, :edit, :update, :destroy, :show] do 
+    resources :purchases, only: [:new, :create, :destroy] 
+  end
 end

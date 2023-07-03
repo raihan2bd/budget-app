@@ -16,12 +16,41 @@ html,
 body {
   font-family: 'Proxima Nova', sans-serif;
   color: #434b54;
+  background-color: #f0f2f1;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: #434b54 !important;
+}
+
+.bg-info,
+.btn-info {
+  background: #3778c2 !important;
+}
+
+.bg-success,
+.btn-success {
+  background: #5fb523 !important;
+}
+
+.text-dark {
+  color: #434b54 !important;
+}
+
+.text-info {
+  color: #3778c2 !important;
+}
+
+.text-success {
+  color: #5fb523 !important;
 }
 
 /* Header css */
 .header {
   background: #3778c2;
   color: #fff;
+  height: 70px;
 }
 
 .btn-icon {
@@ -33,6 +62,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  border: none;
 }
 
 .header h1 {
