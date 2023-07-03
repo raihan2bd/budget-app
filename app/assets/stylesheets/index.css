@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src:
+    url('FontsFree-Net-proxima_nova_reg-webfont.ttf') format('truetype'),
+    url('FontsFree-Net-Proxima-Nova-Bold.otf') format('truetype'),
+    url('FontsFree-Net-Proxima-Nova-Light.otf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  color: #434b54;
+}
+
+/* Header css */
+.header {
+  background: #3778c2;
+  color: #fff;
+}
+
+.btn-icon {
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header h1 {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.8rem;
+}
