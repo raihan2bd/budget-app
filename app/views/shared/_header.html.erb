@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="d-flex justify-content-between align-items-center p-2">
+    <% if back_link %>
+        <%= link_to content_tag(:i, "", class: "bi bi-arrow-left"), back_link, class: "btn-icon" %>
+    <% else %>
+        <button type="button" class="btn-icon px-1 border-0"><i class="bi bi-list"></i></button>
+    <% end %>
+
+    <h1><%= title.upcase %></h1>
+    <% if user_signed_in? %>
+        <%= button_to  content_tag(:i, "", class: "bi bi-box-arrow-right"), destroy_user_session_path, method: :delete, class: "btn-icon" %>
+    <% else %>
+        <%= link_to content_tag(:i, "", class: "bi bi-box-arrow-in-left"), new_user_session_path, class: "btn-icon" %>
+    <% end %>
+  </div>
+</header>
