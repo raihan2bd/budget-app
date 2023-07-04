@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  has_many :categories, dependent: :destroy
+  has_many :categories, foreign_key: 'author_id', dependent: :destroy
   has_many :purchases, foreign_key: 'author_id', dependent: :destroy
 
   validates :name, :email, :password, presence: true

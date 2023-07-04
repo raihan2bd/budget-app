@@ -1,0 +1,14 @@
+<%= link_to category_path(category), class: "item-card d-flex justify-content-between bg-light p-2 text-dark mb-3" do %> 
+    <div class="d-flex gap-2">
+        <div class="item-icon fs-3 d-flex justify-content-center bg-success align-items-center"><%= category.icon %></div>
+        <div class="flex-column">
+            <h4 class="h5 mb-1 fw-bold"><%= category.name %></h4>
+            <p class="fs-6 m-0"><%= pluralize(category.purchases.length, "Entry") %></p>
+        </div>
+    </div>
+    <div class="flex-column">
+        <p class="fs-6 text-right text-dark">
+            <%= number_to_currency(total) %>
+        </p>
+    </div>
+<% end %>

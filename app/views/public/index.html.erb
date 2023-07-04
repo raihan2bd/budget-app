@@ -1,0 +1,10 @@
+<section class="section-container">
+  <div class="splash-screen p-3 pt-5">
+      <%= image_tag("logo.png", alt: "Budget Manager", class: "my-logo mx-auto mt-5") %>
+      <div class="d-block mt-auto d-flex flex-column gap-3">
+        <%= link_to "Log In", new_user_session_path, class: "d-block btn btn-info btn-block border-0 text-light fs-5" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "d-block btn btn-info btn-block  text-light fs-5" %>
+      </div>
+  </div>
+
+</section>

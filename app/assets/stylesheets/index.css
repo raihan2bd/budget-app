@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src:
+    url('FontsFree-Net-proxima_nova_reg-webfont.ttf') format('truetype'),
+    url('FontsFree-Net-Proxima-Nova-Bold.otf') format('truetype'),
+    url('FontsFree-Net-Proxima-Nova-Light.otf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  color: #434b54;
+  background-color: #f0f2f1;
+  overflow-x: hidden;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: #434b54 !important;
+}
+
+.bg-info,
+.btn-info {
+  background: #3778c2 !important;
+}
+
+.bg-success,
+.btn-success {
+  background: #5fb523 !important;
+}
+
+.text-dark {
+  color: #434b54 !important;
+}
+
+.text-info {
+  color: #3778c2 !important;
+}
+
+.text-success {
+  color: #5fb523 !important;
+}
+
+/* Header css */
+.header {
+  background: #3778c2;
+  color: #fff;
+  height: 70px;
+}
+
+.btn-icon {
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+}
+
+.header h1 {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.8rem;
+}
+
+/* css for form */
+.form-container {
+  background-color: #fff;
+  padding: 1rem;
+  height: 100%;
+}
+
+.form-container form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.my-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.user_actions {
+  align-self: self-end;
+  margin-top: auto;
+  bottom: auto;
+  align-content: flex-end;
+  justify-self: end;
+}

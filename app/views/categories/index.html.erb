@@ -1,0 +1,25 @@
+<%= render 'shared/header', title: "Transactions", back_link: false %>
+
+<section class="flex-column">
+<div class="d-flex justify-content-between align-items-center p-3 bg-light">
+    <% purchase_count = @unique_purchases.size %>
+    <p class="m-0 fs-5">Spending: <span class="fw-bold"><%= number_to_currency(@total_amount) %></span></p>
+    <p class="m-0 fs-5">Unique <%= purchase_count == 1 ? "Entry: " : "Entries: " %><span class="fw-bold"><%= purchase_count %></span></p>
+</div>
+<% if @categories.empty? %>
+    <p class="fs-5 text-center">No catagory Found! Please Add a new one.</p>
+<% else %>
+    <ul class="category-items flex-column p-3 mx-auto list-unstyled">
+        <li class="mb-2">
+            <% @categories.each do |category| %>
+                <%= render 'item', category: category, 
+                total: @unique_purchases.map {|i| category.purchases.include?(i) ? i.amount : 0 }.sum %>
+            <% end %>
+        </li>
+    </ul>
+<% end %>
+
+<div class="d-block bg-success p-3 mt-auto">
+    <%= link_to "Add Category", new_category_path, class: "btn btn-outline-light btn-block d-block fs-5" %>
+</div>
+</section>
