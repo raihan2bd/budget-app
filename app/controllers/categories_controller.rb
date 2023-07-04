@@ -11,11 +11,31 @@ class CategoriesController < ApplicationController
     @total_amount = @purchases.map(&:amount).sum
   end
 
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(category_params)
+    @category.author = current_user
+
+    if @category.save
+      redirect_to categories_path, notice: 'New category has been created!'
+    else
+      error = @category.errors.full_messages[0]
+      redirect_to new_category_path, notice: "#{error} Please try again."
+    end
+  end
+
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
+    redirect_to categories_path, notice: 'Category has been deleted'
+  end
 
-    flash[:success] = "#{@category.name} category has been deleted."
-    redirect_to categories_path
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :icon)
   end
 end

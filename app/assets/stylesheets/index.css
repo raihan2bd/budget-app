@@ -17,6 +17,7 @@ body {
   font-family: 'Proxima Nova', sans-serif;
   color: #434b54;
   background-color: #f0f2f1;
+  overflow-x: hidden;
 }
 
 .bg-dark,
@@ -68,4 +69,20 @@ body {
 .header h1 {
   font-family: 'Proxima Nova', sans-serif;
   font-size: 1.8rem;
+}
+
+/* css for form */
+.form-container {
+  background-color: #fff;
+  padding: 1rem;
+  height: 100%;
+}
+
+.form-container form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
