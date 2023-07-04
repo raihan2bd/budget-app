@@ -19,7 +19,7 @@ RSpec.feature 'New purchase Page', type: :feature do
     click_button 'Add Purchase'
 
     expect(current_path).to eq category_path(category)
-    expect(page).to have_content("Your purchase is added successfully 🎉")
+    expect(page).to have_content('Your purchase is added successfully 🎉')
   end
 
   scenario 'User can see an error message if something wrong' do
