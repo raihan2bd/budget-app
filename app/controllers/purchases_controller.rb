@@ -1,5 +1,5 @@
 class PurchasesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def new
     @categories = current_user.categories
