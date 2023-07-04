@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @categories = current_user.categories.includes(:purchases)
     @unique_purchases = current_user.purchases.joins(:categories).distinct

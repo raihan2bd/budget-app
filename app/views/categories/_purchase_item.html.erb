@@ -12,6 +12,8 @@
         <p class="fs-6 text-right text-dark m-0">
             <%= number_to_currency(purchase.amount) %>
         </p>
-        <%= button_to content_tag(:i, "", class: "bi bi-trash"), category_purchase_path(category, purchase), method: :delete, class: 'fs-5 ms-1 btn btn-outline-danger py-1 px-2' %>
+        <% if can? :destroy, purchase %>
+            <%= button_to content_tag(:i, "", class: "bi bi-trash"), category_purchase_path(category, purchase), method: :delete, class: 'fs-5 ms-1 btn btn-outline-danger py-1 px-2' %>
+        <% end %>
     </div>
 </div>
