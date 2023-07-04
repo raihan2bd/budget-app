@@ -86,3 +86,23 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.my-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.user_actions {
+  align-self: self-end;
+  margin-top: auto;
+  bottom: auto;
+  align-content: flex-end;
+  justify-self: end;
+}

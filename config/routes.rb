@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   unauthenticated do 
-    root 'categories#index', as: :unauthenticated_root
+    root 'public#index', as: :unauthenticated_root
   end
   resources :categories, only: [:index, :new, :create, :edit, :update, :destroy, :show] do 
     resources :purchases, only: [:new, :create, :destroy] 
