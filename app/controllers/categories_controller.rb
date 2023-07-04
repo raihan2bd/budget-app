@@ -27,6 +27,17 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = current_user.categories.find(params[:id])
+  end
+
+  def update
+    @category = current_user.categories.find(params[:id])
+    return unless @category.update(category_params)
+
+    redirect_to category_path(@category), notice: "#{@category.name} has been updated"
+  end
+
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
