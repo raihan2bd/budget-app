@@ -56,6 +56,17 @@ Budget app is mobile first application which is allow users to track their purch
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## 🚀 Project Demo <a name="live-demo"></a>
+
+### Project Preview
+![c1](https://github.com/raihan2bd/budget-app/assets/35267447/00a0ce20-0406-471b-a734-0409f9bcdc67)
+![c2](https://github.com/raihan2bd/budget-app/assets/35267447/da43a9f1-f5c3-4c0c-aef1-9dc5f8eabc03)
+![c3](https://github.com/raihan2bd/budget-app/assets/35267447/4075bb92-d9c4-4d30-81a9-9008784675d0)
+
+
+### [Live Project Demo](https://recipe-app-y463.onrender.com/)
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 This repository includes ruby code that can be use to decode the morse code.
