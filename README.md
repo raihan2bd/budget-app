@@ -4,13 +4,13 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Project Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -69,21 +69,22 @@ Budget app is mobile first application which is allow users to track their purch
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-This repository includes ruby code that can be use to decode the morse code.
-
+<a name="setup"></a>
 - At first Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
   git clone https://github.com/raihan2bd/budget-app.git
 ```
-
-- To use this repo to your local computer make sure you have installed [Ruby](https://www.ruby-lang.org/), [Rails](https://rubyonrails.org/), and [PostgreSQL](https://www.postgresql.org/)
-- Then change the database credientials from `/config/database.yml` to your local database credientials.
-- To install necessary require packages open your favorite cd to this project then try the below command
+<a name="prerequisites"></a>
+- To use this repo on your local computer make sure you have installed <a name="install"></a> [Ruby](https://www.ruby-lang.org/), [Rails](https://rubyonrails.org/), and [PostgreSQL](https://www.postgresql.org/)
+- Then change the database credentials from `/config/database.yml` to your local database credentials.
+- To install the necessary require packages open your favorite cd to this project then try the below command
+<a name="usage"></a>
 ```
 bundle install
 ```
+<a name="run-tests"></a>
 - To run this project on your local machine `Enter` the below command
 ```
 rails s
