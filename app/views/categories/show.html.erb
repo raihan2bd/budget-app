@@ -1,0 +1,30 @@
+<%= render 'shared/header', title: "#{@category.icon} #{@category.name}", back_link: categories_path %>
+<section class="flex-column">
+  <div class="d-flex justify-content-between align-items-center p-3 bg-light">
+
+    <p class="m-0 fs-5">Spending: <span class="fw-bold"><%= number_to_currency(@total_amount) %></span></p>
+    <p class="m-0 fs-5"><%= @purchases.size == 1 ? "Entry: " : "Entries: " %><span class="fw-bold"><%= @purchases.size %></span></p>
+  </div>
+  <% if can? :mamage, @category %>
+    <div class="d-flex justify-content-between p-3 mt-auto">
+      <%= link_to  "Edit Category", edit_category_path(@category), class: 'btn btn-warning' %>
+      <%= button_to "Delete Category", category_path(@category), method: :delete, class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+
+  <% if @purchases.empty? %>
+    <p class="fs-5 text-center">No purchases Found! Please Add a new one.</p>
+  <% else %>
+      <ul class="category-items purchase-items flex-column p-3 mx-auto list-unstyled">
+        <li>
+          <% @purchases.each do |purchase| %>
+              <%= render 'purchase_item', category: @category, purchase: purchase %>
+          <% end %>
+        </li>
+      </ul>
+  <% end %>
+
+  <div class="bg-success p-3 mt-auto">
+      <%= link_to "Add purchase", new_category_purchase_path(@category), class: "btn btn-outline-light btn-block d-block fs-5" %>
+  </div>
+</section>

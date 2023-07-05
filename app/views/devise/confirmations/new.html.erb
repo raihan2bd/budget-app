@@ -1,0 +1,21 @@
+<%= render 'shared/header', back_link: unauthenticated_root_path, title: "Resend confirmation instructions" %>
+
+<section class="section-container p-3">
+  <div class="form-container mt-3">
+
+    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="form-container">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: 'form-control', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+
+        <%= f.submit "Resend confirmation instructions", class: "btn btn-info fs-5 text-light mb-3"%>
+    <% end %>
+
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</section>

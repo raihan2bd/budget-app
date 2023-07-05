@@ -1,0 +1,19 @@
+<div class="item-card d-flex justify-content-between bg-light p-2 text-dark mb-3">
+    <div class="d-flex gap-2">
+        <div class="item-icon fs-3 d-flex justify-content-center bg-success align-items-center">💸</div>
+        <div class="flex-column">
+            <h4 class="h5 fw-bold"><%= purchase.name %></h4>
+            <p class="fs-6 m-0">
+                <%= purchase.updated_at.to_datetime.strftime("%B %d, %Y") %>
+            </p>
+        </div>
+    </div>
+    <div class="flex-column">
+        <p class="fs-6 text-right text-dark m-0">
+            <%= number_to_currency(purchase.amount) %>
+        </p>
+        <% if can? :destroy, purchase %>
+            <%= button_to content_tag(:i, "", class: "bi bi-trash"), category_purchase_path(category, purchase), method: :delete, class: 'fs-5 ms-1 btn btn-outline-danger py-1 px-2' %>
+        <% end %>
+    </div>
+</div>
