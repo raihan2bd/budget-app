@@ -65,7 +65,7 @@ Budget app is mobile first application which is allow users to track their purch
 ![c3](https://github.com/raihan2bd/budget-app/assets/35267447/4075bb92-d9c4-4d30-81a9-9008784675d0)
 
 
-### [Live Project Demo](https://recipe-app-y463.onrender.com/)
+### [Live Project Demo](https://budget-app-ktyf.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
